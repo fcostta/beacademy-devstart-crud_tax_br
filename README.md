@@ -21,7 +21,7 @@ Prof. José Lira (
 - O projeto deverá ser armazenado no repositório do github;
 
 Diagrama projetado:
-![Diagrama Crud TAX](../img/Diagrama em branco.jpeg)
+![Diagrama Crud TAX] (../img/Diagrama projeto.png)
 
 
 
