@@ -20,7 +20,7 @@ Prof. José Lira (
 - A solução deve ter pelo menos 30% de testes unitários;
 - O projeto deverá ser armazenado no repositório do github;
 
-- Diagrama projetado:
+Diagrama projetado:
 ![Diagrama Crud TAX](./img/Diagrama em branco.jpeg)
 
 
