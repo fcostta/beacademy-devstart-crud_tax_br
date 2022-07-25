@@ -1,0 +1,15 @@
+Tributos:
+
+00 Id
+01 Código
+02 Nome
+03 Descrição
+04 Alíquota
+05 Apuração (Diaria, Semanal, Quinzenal, Mensal ou Anual)
+06 Esfera (Federal, Municipal ou Estadual)
+07 Conta Contabíl
+08 Centro de Custo
+09 Orgão arrecadador (Secretaria Fazenda, Bombeiros, Meio Ambiente, etc) 
+10 Legislação base (Decreto, Lei)
+11 Incidencia (Mercadoria ou Serviço)
+12 Tipo de contribuinte (Indústria, Comércio ou Serviços)
