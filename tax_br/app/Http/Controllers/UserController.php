@@ -7,7 +7,11 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    //
+    public function __construct(User $user)
+    {
+        $this->model = $user;
+    }
+
 
     public function listUsers()
     {
@@ -23,7 +27,24 @@ class UserController extends Controller
         $title = 'Usuário' . $user->name;
         return view('users.show', compact('user', 'title'));
     }
-    
+
+
+    public function createUsers()
+    {
+        return view('users.create');
+    }
+
+    public function storeUsers(Request $request)
+    {
+        //dd($request->all());
+        $data = $request->all();
+        $data['password'] = bcrypt($request->password);
+        $this->model->create($data);
+
+
+        return redirect()->route('users.list');
+    }
+
 
 
 }

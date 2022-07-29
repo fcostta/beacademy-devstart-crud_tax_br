@@ -11,6 +11,7 @@
         <a href="{{ route('users.list') }}" class="nav-link text-white" style="background-color: #fb9553">Lista Usuários</a>
         <a href="" class="nav-link text-white" style="background-color: #fb9553">Lista Impostos</a>
         <a href="" class="nav-link text-white" style="background-color: #fb9553">Exemplo de Cálculo</a>
+        <a href="{{ route('users.create') }}" class="nav-link text-white" style="background-color: #3f264d">Novo Usuário</a>
     </nav>
     <hr>
 </div>
