@@ -5,8 +5,8 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\TaxController;
 
 
-
-Route::get('/user', [UserController::class , 'listUsers'])->name('users.list');
+Route::get('/users/{id}', [UserController::class , 'showUsers'])->name('users.show');
+Route::get('/users', [UserController::class , 'listUsers'])->name('users.list');
 
 
 
