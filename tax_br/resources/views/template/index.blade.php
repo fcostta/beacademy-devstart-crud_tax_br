@@ -20,7 +20,7 @@
 
 <body>
 
-    <div class="d-flex justify-content-center align-items-center" style="background-color: #fefefe;">
+    <div class="d-flex justify-content-center align-items-center">
         @yield('body')
     </div>
 

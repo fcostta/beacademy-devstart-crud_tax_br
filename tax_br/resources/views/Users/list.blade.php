@@ -1,15 +1,19 @@
-<div style="background-color: #0dcaf0">
+
+
+<div style="background-color: #db4648 ">
 
     @extends('template.index');
 
     <title>Lista de usuários</title>
 
     <nav class="nav nav-masthead justify-content-center float-md-end">
-        <a href="" class="nav-link text-white">Home</a>
-        <a href="" class="nav-link text-white">a</a>
+        <a href="" class="nav-link text-white" style="background-color: #fb9553" >Home</a>
+        <a href="" class="nav-link text-white" style="background-color: #fb9553">a</a>
     </nav>
     <hr>
 </div>
+
+
 @section('body')
 
 <section>
@@ -36,7 +40,7 @@
                         <td>{{ $user->email }}</td>
                         <td>{{ date('d/m/Y', strtotime($user->created_at)) }}</td>
                         <td>{{ date('d/m/Y', strtotime($user->updated_at)) }}</td>
-                        <td><a href="" class="btn btn-success text-white">Visualizar</a></td>
+                        <td><a href="" class="btn btn-danger text-white" style="background-color: #9f3647">Visualizar</a></td>
                     </tr>
                 @endforeach
             </tbody>
