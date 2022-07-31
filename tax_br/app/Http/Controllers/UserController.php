@@ -46,5 +46,39 @@ class UserController extends Controller
     }
 
 
+    public function editUsers($id)
+    {
+        if (!$user = $this->model->find($id))
+            return redirect()->route('users.list');
 
+        return view('users.edit', compact('user'));
+    }
+
+
+    public function updateUsers(Request $request, $id)
+    {
+        if (!$user = $this->model->find($id))
+            return redirect()->route('users.list');
+
+        $data = $request->all();
+
+        if ($request->password)
+            $data['password'] = bcrypt($request->password);
+
+        $data['password'] = $user->password;
+        $user->update($data);
+        return redirect()->route('users.list');
+    }
+
+
+    public function destroyUsers($id)
+    {
+        if (!$user = $this->model->find($id))
+            return redirect()->route('users.list');
+
+        $user->delete();
+        return redirect()->route('users.list')->with('destroy', 'excluido!');
+
+
+    }
 }
