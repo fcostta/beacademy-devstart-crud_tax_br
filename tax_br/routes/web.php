@@ -15,7 +15,7 @@ Route::get('/users/{id}', [UserController::class , 'showUsers'])->name('users.sh
 Route::get('/users', [UserController::class , 'listUsers'])->name('users.list');
 
 //Taxs
-Route::get('/tax', [TaxController::class , 'indexTax'])->name('index.tax');
+Route::get('/tax', [TaxController::class , 'listTax'])->name('index.tax');
 
 
 

@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class TaxController extends Controller
 {
-    public function indexTax()
+    public function listTax()
     {
         $taxs=[
             'name'=>['PIS',

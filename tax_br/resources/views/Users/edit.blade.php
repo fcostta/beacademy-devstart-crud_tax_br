@@ -29,7 +29,8 @@
         <div class="container mt-8 card text-center py-3 m-3" 
                 style="width: 60rem; height: 25rem; background-color: #e4e6c3 " >
 
-            <h2 class="pt-5 text-left text-black">Atualização do usuário<br>Usuário {{$user->name}}</h2>
+            <h2 class="pt-3 text-left text-black">Alteração de dados</h2>
+            <h3 class="pt-2 text-left text-black">{{$user->name}}</h3>
             <hr>
 
             <div class="input-group mb-3">
