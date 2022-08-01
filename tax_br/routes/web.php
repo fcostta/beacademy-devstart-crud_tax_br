@@ -6,7 +6,7 @@ use App\Http\Controllers\TaxController;
 
 
 //Users
-Route::delete('/users/{id}', [UserController::class, 'destroyUsers'])->name('users.destroy');
+Route::delete('/users/{id}', [UserController::class , 'destroyUsers'])->name('users.destroy');
 Route::get('/users/{id}/edit', [UserController::class , 'editUsers'])->name('users.edit');
 Route::put('/users/{id}', [UserController::class , 'updateUsers'])->name('users.update');
 Route::post('/users', [UserController::class , 'storeUsers'])->name('users.store');
@@ -16,8 +16,8 @@ Route::get('/users', [UserController::class , 'listUsers'])->name('users.list');
 
 //Taxs
 Route::get('/tax', [TaxController::class , 'listTax'])->name('index.tax');
-
-
+Route::get('/taxs/create', [TaxController::class , 'createTaxs'])->name('taxs.create');
+Route::post('/taxs', [UserController::class , 'storeTaxs'])->name('taxs.store');
 
 
 
