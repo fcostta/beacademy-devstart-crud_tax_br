@@ -46,7 +46,7 @@
         </li>
       </ul>
     </div>
-                        <div class="col-2">
+                            <div class="col-2">
                             <ul class="navbar-nav mr-auto">
                                 @if(Auth::user())
                                     <li class="nav-item">

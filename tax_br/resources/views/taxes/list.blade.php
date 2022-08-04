@@ -49,7 +49,7 @@
                             <td class="align-middle">{{ $tax->aliquot }}%</td>
                             <td class="align-middle">{{ $tax->typeOfTaxpayer }}</td>
                             <td class="align-middle">{{ date('d/m/Y', strtotime($tax->updated_at)) }}</td>
-                            <td class="align-middle"><a href= "{{ route('taxes.show', $tax->id) }}" class="btn btn-success text-white">Visualizar</a></td>
+                            <td class="align-middle"><a href= "{{ route('taxes.show', $tax->id) }}" class="btn btn-danger text-white" style="background-color: #9f3647">Visualizar</a></td>
                             
                         </tr>
                         @endforeach
