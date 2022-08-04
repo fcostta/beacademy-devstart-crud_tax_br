@@ -20,7 +20,7 @@
 <!-- ///////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
 
 
-    <form action="{{ route('taxs.store') }}"method="POST" >
+    <form action="{{ route('taxes.store') }}"method="POST" >
         @csrf
 
         <div class="container mt-8 card text-center py-3 m-3" style="width: 60rem; height: 42.5rem; background-color: #e4e6c3 " >
@@ -61,7 +61,6 @@
             <div class="row d-flex justify-content-center">
 
                 <div class="col-md-4 col-xs-6">
-                    <!-- Aliquota -->
                     <label for="basic-url" class="fw-bold">Alíquota</label>
                     <div class="input-group mb-3 col">
                         <div class="input-group-prepend">
@@ -76,26 +75,25 @@
                 <div class="col-md-4 col-xs-6">
                     
                     <label for="basic-url" class="fw-bold">Periodicidade</label>
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select" aria-label="Default select example" name="calculationPeriod" >
                         <option selected> -- Selecione -- </option>
-                        <option value="1">Anual</option>
-                        <option value="2">Mensal</option>
-                        <option value="3">Quinzenal</option>
-                        <option value="4">Semanal</option>
-                        <option value="5">Diario</option>
+                        <option value="Anual">Anual</option>
+                        <option value="Mensal">Mensal</option>
+                        <option value="Quinzenal">Quinzenal</option>
+                        <option value="Semanal">Semanal</option>
+                        <option value="Diario">Diario</option>
                       
                     </select>
-
                 </div>
 
                 <div class="col-md-4 col-xs-6">
                     <label for="basic-url" class="fw-bold">Esfera</label>
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select" aria-label="Default select example" name="sphere">
                         <option selected> -- Selecione -- </option>
-                        <option value="1">Federal</option>
-                        <option value="2">Estadual</option>
-                        <option value="3">Municipal</option>
-                        <option value="4">Outros</option>
+                        <option value="Federal">Federal</option>
+                        <option value="Estadual">Estadual</option>
+                        <option value="Municipal">Municipal</option>
+                        <option value="Outros">Outros</option>
                       
                     </select>
                 </div>
@@ -120,7 +118,8 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text fw-bold">Nº</span>
                         </div>
-                        <input id="aliquot" name="aliquot" type="text" class="form-control" aria-label="aliquot" vertical-align="center">
+                        <input id="accountingAccount" name="accountingAccount" type="text" class="form-control" 
+                                aria-label="accountingAccount" vertical-align="center">
                     </div>
                 </div>
 
@@ -131,7 +130,8 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text fw-bold">Nº</span>
                         </div>
-                        <input id="aliquot" name="aliquot" type="text" class="form-control" aria-label="aliquot" vertical-align="center">
+                        <input id="costCenter" name="costCenter" type="text" class="form-control" 
+                                aria-label="costCenter" vertical-align="center">
                     </div>
                 </div>
             </div>
@@ -149,12 +149,12 @@
                 <div class="col-md-4 col-xs-6">
 
                     <label for="basic-url" class="fw-bold">Incidencia</label>
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select" aria-label="Default select example" name="incidence">
                         <option selected> -- Selecione -- </option>
-                        <option value="1">Mercadorias</option>
-                        <option value="2">Serviços</option>
-                        <option value="3">Doações</option>
-                        <option value="4">Outros</option>                      
+                        <option value="Mercadorias">Mercadorias</option>
+                        <option value="Serviços">Serviços</option>
+                        <option value="Doações">Doações</option>
+                        <option value="Outros">Outros</option>                      
                     </select>
                 </div>
 
@@ -162,12 +162,12 @@
                 <div class="col-md-4 col-xs-6">
                     
                     <label for="basic-url" class="fw-bold">Tipo de contribuinte</label>
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select" aria-label="Default select example" name="typeOfTaxpayer">
                         <option selected> -- Selecione -- </option>
-                        <option value="1">Industria</option>
-                        <option value="2">Comércio</option>
-                        <option value="3">Prestador de Serviços</option>
-                        <option value="4">Outros</option>                      
+                        <option value="Industria">Industria</option>
+                        <option value="Comércio">Comércio</option>
+                        <option value="Serviços">Prestador de Serviços</option>
+                        <option value="Outros">Outros</option>                      
                     </select>
 
                 </div>

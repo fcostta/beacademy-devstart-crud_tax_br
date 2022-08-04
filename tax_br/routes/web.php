@@ -15,9 +15,10 @@ Route::get('/users/{id}', [UserController::class , 'showUsers'])->name('users.sh
 Route::get('/users', [UserController::class , 'listUsers'])->name('users.list');
 
 //Taxs
-Route::get('/tax', [TaxController::class , 'listTax'])->name('index.tax');
-Route::get('/taxs/create', [TaxController::class , 'createTaxs'])->name('taxs.create');
-Route::post('/taxs', [UserController::class , 'storeTaxs'])->name('taxs.store');
+Route::get('/taxes/create', [TaxController::class , 'createTaxes'])->name('taxes.create');
+Route::post('/taxes', [TaxController::class , 'storeTaxes'])->name('taxes.store');
+Route::get('/taxes', [TaxController::class , 'listTaxes'])->name('taxes.list');
+Route::get('/taxes/{id}', [TaxController::class , 'showTaxes'])->name('taxes.show');
 
 
 

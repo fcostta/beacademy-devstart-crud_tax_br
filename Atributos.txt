@@ -13,3 +13,22 @@ Tributos:
 10 Legislação base (Decreto, Lei)
 11 Incidencia (Mercadoria ou Serviço)
 12 Tipo de contribuinte (Indústria, Comércio ou Serviços)
+
+        'revenueCode',
+        'name',
+        'description',
+        'aliquot',
+        'calculationPeriod',
+        'sphere',
+        'accountingAccount',
+        'costCenter',
+        'collectionAgency',
+        'basicLegislation',
+        'incidence',
+        'typeOfTaxpayer',
+        'linkedTable'
+
+
+
+Administrador Jade Shopp
+js.admin@jadeshopp.com

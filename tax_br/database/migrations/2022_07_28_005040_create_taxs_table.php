@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('taxs', function (Blueprint $table) {
+        Schema::create('taxes', function (Blueprint $table) {
             $table->id();
             $table->string('revenueCode');
             $table->string('name');
@@ -27,7 +27,7 @@ return new class extends Migration
             $table->string('basicLegislation');
             $table->string('incidence');
             $table->string('typeOfTaxpayer');
-            $table->string('linkedTable');
+            $table->string('linkedTable')->nullable();
             $table->timestamps();
         });
     }

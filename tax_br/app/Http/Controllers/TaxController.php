@@ -13,27 +13,40 @@ class TaxController extends Controller
     }
 
 
-    public function listTax()
+    public function listTaxes()
     {
-        $taxs = [
-            'name' => ['PIS',
-                'COFINS']
-        ];
+        //$taxes = [
+        //    'name' => ['PIS',
+        //        'COFINS']
+        //];
+        //dd($taxes);
 
-        dd($taxs);
+            $taxes =Tax::paginate(5);
+            return view('taxes.list', compact('taxes'));
 
     }
 
-    public function createTaxs()
+    public function createTaxes()
     {
-        return view('taxs.create');
+        return view('taxes.create');
     }
 
-    public function storeTaxs(Request $request)
+    public function storeTaxes(Request $request)
     {
+
         $data = $request->all();
         $this->model->create($data);
 
-    //return redirect()->route('users.list');
+        //return redirect()->route('taxes.list');
+        return redirect()->route('taxes.list')->with('create', 'Imposto cadastrado!');
+    }
+
+    public function showTaxes($id)
+    {
+        if (!$tax = Tax::find($id))
+            return redirect()->route('taxes.list');
+
+        $title = 'Impostos ' . $tax->name;
+        return view('taxes.show', compact('tax', 'title'));
     }
 }
