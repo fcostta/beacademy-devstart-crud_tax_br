@@ -1,30 +1,21 @@
 
+@extends('template.index');
 
-<div style="background-color: #db4648 ">
-
-    @extends('template.index');
-
-    <title>Lista de usuários</title>
-
-    <nav class="nav nav-masthead justify-content-center float-md-end">
-        <a href="" class="nav-link text-white" style="background-color: #fb9553" >Home</a>
-        <a href="{{ route('users.list') }}" class="nav-link text-white" style="background-color: #fb9553">Lista Usuários</a>
-        <a href="" class="nav-link text-white" style="background-color: #fb9553">Lista Impostos</a>
-        <a href="" class="nav-link text-white" style="background-color: #fb9553">Exemplo de Cálculo</a>
-        <a href="{{ route('users.create') }}" class="nav-link text-white" style="background-color: #3f264d">Novo Usuário</a>
-    </nav>
-    <hr>
-</div>
-
-@if (session()-> has('destroy'))
-<div class="container  alert alert-success" role="alert">
-    <strong>Usuário excluído com sucesso!</strong>
-</div>
-@endif
+<title>Lista de usuários</title>
 
 @section('body')
 
 <section>
+
+@if (session()-> has('destroy'))
+<div class="container  alert alert-danger" role="alert">
+    <strong>Usuário excluído com sucesso!</strong>
+</div>
+@elseif (session()-> has('create'))
+<div class="container  alert alert-success" role="alert">
+    <strong>Usuário cadastrado com sucesso!</strong>
+</div>
+@endif
 
     <div class="container  pt-5">
         <h1>Lista de usuários</h1>
@@ -54,6 +45,10 @@
             </tbody>
         </table>
     </div>
+
+        <div class=" container justify-content-center pagination">
+            {{ $users->links('pagination::bootstrap-4') }}
+        </div>
 
 </section>
 @endsection

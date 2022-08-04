@@ -15,7 +15,7 @@ class UserController extends Controller
 
     public function listUsers()
     {
-        $users = User::all();
+        $users = User::paginate(10);
         return view('users.list', compact('users'));
     }
 
@@ -42,7 +42,7 @@ class UserController extends Controller
         $this->model->create($data);
 
 
-        return redirect()->route('users.list');
+        return redirect()->route('users.list')->with('create', 'Usuario cadastrado com sucesso!');;
     }
 
 
@@ -67,7 +67,7 @@ class UserController extends Controller
 
         $data['password'] = $user->password;
         $user->update($data);
-        return redirect()->route('users.list');
+        return redirect()->route('users.show',$user->id)->with('update', 'Usuario alterado!');
     }
 
 

@@ -1,19 +1,6 @@
+@extends('template.index');
 
-<div style="background-color: #db4648 ">
-
-    @extends('template.index');
-
-    <title>Cadastro de usuários</title>
-
-    <nav class="nav nav-masthead justify-content-center float-md-end">
-        <a href="" class="nav-link text-white" style="background-color: #fb9553" >Home</a>
-        <a href="{{ route('users.list') }}" class="nav-link text-white" style="background-color: #fb9553">Lista Usuários</a>
-        <a href="" class="nav-link text-white" style="background-color: #fb9553">Lista Impostos</a>
-        <a href="" class="nav-link text-white" style="background-color: #fb9553">Exemplo de Cálculo</a>
-    </nav>
-    <hr>
-</div>
-
+<title>Cadastro de usuários</title>
 
 @section('body')
 

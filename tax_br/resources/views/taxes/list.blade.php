@@ -1,6 +1,10 @@
-<div style="background-color: #db4648 ">
-    @extends('template.index');
-    @section('title', "Impostos, Taxas e Contribuições")
+
+@extends('template.index');
+@section('title', "Impostos, Taxas e Contribuições")
+
+@section('body')
+
+<section>
 
 @if (session()-> has('destroy'))
 <div class="container  alert alert-danger" role="alert">
@@ -11,21 +15,6 @@
     <strong>Imposto cadastrado com sucesso!</strong>
 </div>
 @endif
-
-    <nav class="nav nav-masthead justify-content-center float-md-end">
-        <a href="" class="nav-link text-white" style="background-color: #fb9553" >Home</a>
-        <a href="{{ route('users.list') }}" class="nav-link text-white" style="background-color: #fb9553">Lista Usuários</a>
-        <a href="" class="nav-link text-white" style="background-color: #fb9553">Lista Impostos</a>
-        <a href="" class="nav-link text-white" style="background-color: #fb9553">Exemplo de Cálculo</a>
-    </nav>
-    <hr>
-</div>
-
-
-@section('body')
-
-<section>
-
 
     <div class="Container pt-5">
 
@@ -66,11 +55,12 @@
                         @endforeach
                     </tbody>
 
-                    <div class=" container justify-content-center pagination">
-                        {{ $taxes->links('pagination::bootstrap-4') }}
-                    </div>
+
                 </table>
-            
+                
+                <div class=" container justify-content-center pagination">
+                        {{ $taxes->links('pagination::bootstrap-4') }}
+                </div>      
 
     </div>
 

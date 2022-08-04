@@ -1,23 +1,18 @@
 
-<div style="background-color: #db4648 ">
+@extends('template.index');
 
-    @extends('template.index');
-
-    <title>Usuário {{ $user->name }}</title>
-
-    <nav class="nav nav-masthead justify-content-center float-md-end">
-        <a href="" class="nav-link text-white" style="background-color: #fb9553" >Home</a>
-        <a href="{{ route('users.list') }}" class="nav-link text-white" style="background-color: #fb9553">Lista Usuários</a>
-        <a href="" class="nav-link text-white" style="background-color: #fb9553">Lista Impostos</a>
-        <a href="" class="nav-link text-white" style="background-color: #fb9553">Exemplo de Cálculo</a>
-    </nav>
-    <hr>
-</div>
-
-
+<title>Usuário {{ $user->name }}</title>
+ 
 @section('body')
 
 <section>
+
+@if (session()-> has('update'))
+<div class="container  alert alert-warning" role="alert">
+    <strong>Usuário alterado com sucesso!</strong>
+</div>
+@endif
+
 
     <div class="container pt-5">
         <h2>Usuário</h2>

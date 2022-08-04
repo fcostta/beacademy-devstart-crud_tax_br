@@ -1,28 +1,17 @@
-<div style="background-color: #db4648 ">
 
-    @extends('template.index');
+@extends('template.index');
 
-    <title> Impostos: {{ $tax->name }} </title>
+<title> Impostos: {{ $tax->name }} </title>
 
-    <nav class="nav nav-masthead justify-content-center float-md-end">
-        <a href="" class="nav-link text-white" style="background-color: #fb9553" >Home</a>
-        <a href="{{ route('users.list') }}" class="nav-link text-white" style="background-color: #fb9553">Lista Usuários</a>
-        <a href="" class="nav-link text-white" style="background-color: #fb9553">Lista Impostos</a>
-        <a href="" class="nav-link text-white" style="background-color: #fb9553">Exemplo de Cálculo</a>
-    </nav>
-    <hr>
-</div>
+@section('body')
+
+<section>
 
 @if (session()-> has('update'))
 <div class="container  alert alert-warning" role="alert">
     <strong>Imposto alterado com sucesso!</strong>
 </div>
 @endif
-
-
-@section('body')
-
-<section>
 
     <div class="pt-3 card shadow m-3" style="width: 110rem;">
         <div class="row g-0">
@@ -92,9 +81,10 @@
                     </div>
 
                     <div class="conteiner text-center">
-                        <a href="" class="btn btn-warning text-white">Editar</a>
-                        <form class="d-inline-block" action="" method="POST">
-
+                        <a href="{{ route('taxes.edit', $tax->id) }}"  class="btn btn-warning text-white">Editar</a>
+                        <form class="d-inline-block" action="{{ route('taxes.destroy', $tax->id) }}" method="POST">
+                                @method('DELETE')
+                                @csrf
                             <button type="submit" class="btn btn-danger text-white">Excluir</button>
                         </form>
                     </div>

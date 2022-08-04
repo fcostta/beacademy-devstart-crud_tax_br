@@ -5,6 +5,9 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\TaxController;
 
 
+//Home
+Route::get('', [UserController::class , 'welcome'])->name('welcome');
+
 //Users
 Route::delete('/users/{id}', [UserController::class , 'destroyUsers'])->name('users.destroy');
 Route::get('/users/{id}/edit', [UserController::class , 'editUsers'])->name('users.edit');
@@ -15,10 +18,14 @@ Route::get('/users/{id}', [UserController::class , 'showUsers'])->name('users.sh
 Route::get('/users', [UserController::class , 'listUsers'])->name('users.list');
 
 //Taxs
+
 Route::get('/taxes/create', [TaxController::class , 'createTaxes'])->name('taxes.create');
 Route::post('/taxes', [TaxController::class , 'storeTaxes'])->name('taxes.store');
 Route::get('/taxes', [TaxController::class , 'listTaxes'])->name('taxes.list');
-Route::get('/taxes/{id}', [TaxController::class , 'showTaxes'])->name('taxes.show');
+Route::get('/taxes/{id}',      [TaxController::class , 'showTaxes'])->name('taxes.show');
+Route::get('/taxes/{id}/edit', [TaxController::class , 'editTaxes'])->name('taxes.edit');
+Route::put('/taxes/{id}',    [TaxController::class , 'updateTaxes'])->name('taxes.update');
+Route::delete('/taxes/{id}', [TaxController::class , 'destroyTaxes'])->name('taxes.destroy');
 
 
 

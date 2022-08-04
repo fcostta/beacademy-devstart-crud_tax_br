@@ -14,6 +14,46 @@
     <link rel="stylesheet" type="text/css" href="{{ url('css/style.css') }}">
 
     <title>@yield('title')</title>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid" >
+    <a class="h1 navbar-brand fw-bold " href="#" style="color: #db4648">...:: CRUD TAX-BR ::...</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active fw-bold " aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item dropdown fw-bold">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Usuários
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="{{ route('users.list') }}" >Lista de usuários</a></li>
+            <li><a class="dropdown-item" href="{{ route('users.create') }}">Cadastrar usuário</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown fw-bold">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Impostos
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="{{ route('taxes.list') }}">Lista de Impostos</a></li>
+            <li><a class="dropdown-item" href="{{ route('taxes.create') }}">Cadastrar novo imposto</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
 </head>
 
 <body>

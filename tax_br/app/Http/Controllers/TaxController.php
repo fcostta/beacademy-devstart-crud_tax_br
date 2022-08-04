@@ -21,8 +21,8 @@ class TaxController extends Controller
         //];
         //dd($taxes);
 
-            $taxes =Tax::paginate(5);
-            return view('taxes.list', compact('taxes'));
+        $taxes = Tax::paginate(5);
+        return view('taxes.list', compact('taxes'));
 
     }
 
@@ -49,4 +49,37 @@ class TaxController extends Controller
         $title = 'Impostos ' . $tax->name;
         return view('taxes.show', compact('tax', 'title'));
     }
+
+    public function editTaxes($id)
+    {
+        if (!$tax = $this->model->find($id))
+            return redirect()->route('taxes.list');
+
+        return view('taxes.edit', compact('tax'));
+    }
+
+
+    public function updateTaxes(Request $request, $id)
+    {
+        if (!$tax = $this->model->find($id))
+            return redirect()->route('taxes.list');
+
+        $data = $request->all();
+
+        $tax->update($data);
+
+        return redirect()->route('taxes.show', $tax->id)->with('update', 'Imposto alterado!');
+    }
+
+    public function destroyTaxes($id)
+    {
+
+        if (!$tax = $this->model->find($id))
+            return redirect()->route('taxes.list');
+
+        $tax->delete();
+        return redirect()->route('taxes.list')->with('destroy', 'Produto excluido!');
+    }
+
+
 }
