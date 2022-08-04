@@ -21,6 +21,11 @@ Prof. José Lira (
 - A solução deve ter pelo menos 30% de testes unitários;
 - O projeto deverá ser armazenado no repositório do github (beacademy-devstart-crud_tax_br);
 
+Dados
+'name' => 'Administrador',
+'email' => 'adm@tax.com',
+'password' => 'TaxAdmin',
+
 Diagrama projetado:
 ![Diagrama Crud TAX](https://github.com/fabinho-oc/beacademy-devstart-crud_tax_br/blob/main/img/Diagrama%20projeto.png?raw=true)
 
