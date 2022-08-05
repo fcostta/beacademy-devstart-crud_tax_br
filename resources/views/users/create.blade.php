@@ -13,7 +13,7 @@
 
         <div class="container mt-8 card text-center py-3 m-3" style="width: 60rem; height: 25rem; background-color: #e4e6c3 " >
 
-            <h2 class="pt-5 text-left text-black">Cadastro de Usuários</h2>
+            <h2 class="pt-5 text-left text-black">Cadastro de Usuarios</h2>
             <hr>
 
             <div class="input-group mb-3">
