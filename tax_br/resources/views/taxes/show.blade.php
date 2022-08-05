@@ -13,7 +13,7 @@
 </div>
 @endif
 
-    <div class="pt-3 card shadow m-3" style="width: 110rem;">
+    <div class="pt-3 card shadow m-3" style="width: 90rem;">
         <div class="row g-0">
             <div >
 
@@ -28,7 +28,7 @@
                         
                         <div class="pt-3 form-floating">
                             <textarea class="form-control" placeholder="Leave a comment here" 
-                                id="description" name="description" style="height: 100px" disabled> {{ $tax->description }} </textarea>
+                                id="description" name="description" style="height: 80px" disabled> {{ $tax->description }} </textarea>
 
                             <label for="description" class=" pt-4 fw-bold">Descrição</label>
                             <br>
@@ -36,7 +36,7 @@
 
                         <div class=" pt-3 form-floating">
                             <textarea class="form-control" placeholder="Leave a comment here" 
-                                id="description" name="description" style="height: 100px" disabled> {{ $tax->basicLegislation }} </textarea>
+                                id="description" name="description" style="height: 80px" disabled> {{ $tax->basicLegislation }} </textarea>
 
                             <label for="description" class=" pt-4 fw-bold">Legislação:</label>
                             <br>

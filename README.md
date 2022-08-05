@@ -44,7 +44,8 @@ Atualmente estou no primeiro ano de analise e desenvolvimento de sistemas, e atu
 Na area de Finanças, tenho graduação em Ciências Contábeis e Pós-Graduação em Contabilidade e Cotroladiria Empresarial
 
 ## Stack utilizada
-**Back-end:** ![version 9](https://laravel.com/img/logotype.min.svg)
+**Back-end:**
+(https://laravel.com/img/logotype.min.svg)
 
 
 
