@@ -13,23 +13,25 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('taxes', function (Blueprint $table) {
-            $table->id();
-            $table->string('revenueCode');
-            $table->string('name');
-            $table->text('description');
-            $table->string('aliquot');
-            $table->string('calculationPeriod');
-            $table->string('sphere');
-            $table->string('accountingAccount');
-            $table->string('costCenter');
-            $table->string('collectionAgency');
-            $table->string('basicLegislation');
-            $table->string('incidence');
-            $table->string('typeOfTaxpayer');
-            $table->string('linkedTable')->nullable();
-            $table->timestamps();
-        });
+        if(!Schema::hasTable('taxes')){
+            Schema::create('taxes', function (Blueprint $table) {
+                $table->id();
+                $table->string('revenueCode');
+                $table->string('name');
+                $table->text('description');
+                $table->string('aliquot');
+                $table->string('calculationPeriod');
+                $table->string('sphere');
+                $table->string('accountingAccount');
+                $table->string('costCenter');
+                $table->string('collectionAgency');
+                $table->string('basicLegislation');
+                $table->string('incidence');
+                $table->string('typeOfTaxpayer');
+                $table->string('linkedTable')->nullable();
+                $table->timestamps();
+            });
+        }
     }
 
     /**
