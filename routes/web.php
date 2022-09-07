@@ -1,8 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
-use App\Http\Controllers\TaxController;
+use App\Http\Controllers\{
+                UserController,
+                TaxController
+                };
 
 
 require __DIR__ . '/auth.php';
@@ -12,7 +14,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware(['auth'])->group(function() {
+Route::middleware(['auth'])->group(function () {
 
     //Users
     Route::delete('/users/{id}', [UserController::class , 'destroyUsers'])->name('users.destroy');
@@ -23,7 +25,7 @@ Route::middleware(['auth'])->group(function() {
     Route::get('/users/{id}', [UserController::class , 'showUsers'])->name('users.show');
     Route::get('/users', [UserController::class , 'listUsers'])->name('users.list');
 
-//Taxs
+    //Taxs
     Route::get('/taxes/create', [TaxController::class , 'createTaxes'])->name('taxes.create');
     Route::post('/taxes', [TaxController::class , 'storeTaxes'])->name('taxes.store');
     Route::get('/taxes', [TaxController::class , 'listTaxes'])->name('taxes.list');
